@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mb-4 text-center">Course Manager</h1>
+
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="courseName" class="form-label">Course Name</label>
+                <input type="text" class="form-control" id="courseName" />
+                <div class="invalid-feedback invalid-name"></div>
+            </div>
+
+            <div class="col-md-6">
+                <label for="courseCategory" class="form-label">Category</label>
+                <input type="text" class="form-control" id="courseCategory" />
+                <div class="invalid-feedback invalid-category"></div>
+            </div>
+
+            <div class="col-md-4">
+                <label for="coursePrice" class="form-label">Price</label>
+                <input type="text" class="form-control" id="coursePrice" />
+                <div class="invalid-feedback invalid-price"></div>
+            </div>
+
+            <div class="col-md-4">
+                <label for="courseCapacity" class="form-label">Capacity</label>
+                <input type="text" class="form-control" id="courseCapacity" />
+                <div class="invalid-feedback invalid-capacity"></div>
+            </div>
+
+            <div class="col-md-4">
+                <label for="courseDescription">Description</label>
+                <textarea id="courseDescription" class="form-control" id="courseCapacity"></textarea>
+                <div class="invalid-feedback invalid-description"></div>
+            </div>
+
+            <div class="col-12 d-flex gap-2">
+                <button type="submit" id="click" class="btn btn-primary">Add Course</button>
+                <button type="button" id="deleteBtn" class="btn btn-danger">Delete All</button>
+            </div>
+        </form>
+
+        <hr/>
+
+        <input type="text" id="search" placeholder="Search by Name..." class="form-control mb-3" />
+
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Capacity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="data" class="text-center"></tbody>
+        </table>
+    </div>
+  
+    <!-- bootstrap js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <!-- sweet alert -->
+    <!-- custom js file -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
